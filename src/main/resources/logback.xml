@@ -1,0 +1,13 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%-5level %X{akkaSource} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.emnify.milu.akka.ddata" level="INFO"/>
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
