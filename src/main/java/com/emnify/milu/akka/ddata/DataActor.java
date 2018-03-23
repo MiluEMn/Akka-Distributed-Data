@@ -1,7 +1,6 @@
 package com.emnify.milu.akka.ddata;
 
 import akka.actor.AbstractActor;
-import akka.actor.AbstractActor.Receive;
 import akka.actor.ActorRef;
 import akka.actor.Cancellable;
 import akka.actor.Props;
@@ -25,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DataActor extends AbstractActor {
 
-  private final LoggingAdapter log = Logging.getLogger(getContext().system(), getSelf());
+  private final LoggingAdapter log = Logging.getLogger(getContext().system(), this);
   private final ActorRef replicator = DistributedData.get(getContext().system()).replicator();
   private final Cluster cluster = Cluster.get(getContext().system());
   private final Key<ORSet<Integer>> dataKey = ORSetKey.create("key");

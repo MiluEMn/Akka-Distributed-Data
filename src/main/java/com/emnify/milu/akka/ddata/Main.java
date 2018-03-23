@@ -14,7 +14,7 @@ public class Main {
     Config conf = ConfigFactory.load("application.conf");
     ActorSystem system = ActorSystem.create("ddata", conf);
 
-    system.actorOf(DataActor.props(), "dataActor1");
+    system.actorOf(DataActor.props(), "dataActor");
 
     System.out.println("Press ENTER to shutdown");
     System.in.read();
