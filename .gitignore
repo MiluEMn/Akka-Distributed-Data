@@ -1,0 +1,8 @@
+.project
+.classpath
+.idea
+.settings
+.vagrant/
+target/
+*.iml
+*.log
